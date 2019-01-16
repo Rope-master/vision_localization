@@ -1,0 +1,34 @@
+camera_parameter_filename: /home/fangjun/task1/vision_localization/test/data/pudong.yaml
+image_list_filename: /home/fangjun/task1/vision_localization/test/data/image-list.txt
+image_dir: /home/fangjun/task1/vision_localization/test/data
+
+# ipm_cnn binarization threshold
+ipm_cnn_bw_threshold: 40
+
+# ipm_filter binarization threshold: in the range (0,1)
+# ipm_filter is the gradient image of ipm_
+ipm_filter_bw_threshold: 0.25
+
+# fit a line using contour information with RANSAC
+ransac_contour_success_probability: 0.98
+ransac_contour_max_outlier_ratio: 0.3
+ransac_contour_threshold: 3
+
+# minimum number of required points
+ransac_contour_minimum_required_points: 5
+
+# 1 to remove lines with direction outside the given region
+# 0 to keep them
+ransac_contour_constrain_line_direction_ipm: 0
+
+# 1 to remove line in small length
+# 0 to keep them
+ransac_contour_constrain_line_length_ipm: 1
+
+# minimum line line in pixel in the IPM image
+# lines whose length is less than this value is removed
+# Only if ransac_contour_constrain_line_length_ipm is 1 is this flag effective
+ransac_contour_minimum_line_length_ipm: 20
+
+# maximum difference in r in merging two lines
+merge_line_max_difference_r_ipm: 20
