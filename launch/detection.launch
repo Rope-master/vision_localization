@@ -1,0 +1,5 @@
+<launch>
+    <node pkg="vision_localization" type="lane_line_detection" name="lane_line_detection" output="screen">
+        <rosparam command="load" file="$(find vision_localization)/config/default.yaml" />
+    </node>
+</launch>
